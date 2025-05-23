@@ -70,3 +70,10 @@ prettier.json
   "editor.formatOnSave": true,
 
 ```
+
+package.json
+```json
+  "scripts": {
+    "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
+  },
+```
