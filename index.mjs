@@ -21,6 +21,7 @@ const baseConfig = [
     languageOptions: {
       globals: {
         ...globals.browser,
+        ...globals.node,
       },
       parser: tseslintParser,
       parserOptions: {
@@ -78,6 +79,7 @@ const baseConfig = [
       "import-x/newline-after-import": "warn",
       "import-x/no-duplicates": "error",
       "prettier/prettier": "error",
+      "no-console": ["warn", { allow: ["warn", "error"] }],
     },
   },
 
