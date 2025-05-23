@@ -52,6 +52,7 @@ const baseConfig = [
         "warn",
         {
           groups: [
+            "reactGroup",
             "builtin",
             "external",
             "internal",
@@ -63,28 +64,24 @@ const baseConfig = [
           pathGroups: [
             {
               pattern: "react",
-              group: "external",
-              position: "before",
-            },
-            {
-              pattern: "react-dom",
-              group: "external",
-              position: "before",
+              group: "reactGroup",
             },
             {
               pattern: "react/**",
-              group: "external",
-              position: "before",
+              group: "reactGroup",
+            },
+            {
+              pattern: "react-dom",
+              group: "reactGroup",
             },
             {
               pattern: "react-dom/**",
-              group: "external",
-              position: "before",
+              group: "reactGroup",
             },
+
             {
               pattern: "@/**",
               group: "internal",
-              position: "after",
             },
           ],
           "newlines-between": "always",
