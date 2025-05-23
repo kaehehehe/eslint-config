@@ -6,6 +6,9 @@ import tseslintParser from "@typescript-eslint/parser";
 import importXPlugin from "eslint-plugin-import-x";
 import prettierPlugin from "eslint-plugin-prettier";
 import prettierConfig from "eslint-config-prettier";
+import reactPlugin from "eslint-plugin-react";
+import reactHooksPlugin from "eslint-plugin-react-hooks";
+import reactRefreshPlugin from "eslint-plugin-react-refresh";
 
 const baseConfig = [
   {
@@ -45,7 +48,6 @@ const baseConfig = [
         },
       ],
       "no-console": "warn",
-
       "import-x/order": [
         "warn",
         {
@@ -77,6 +79,28 @@ const baseConfig = [
       "import-x/newline-after-import": "warn",
       "import-x/no-duplicates": "error",
       "prettier/prettier": "error",
+    },
+  },
+
+  {
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+    plugins: {
+      react: reactPlugin,
+      "react-hooks": reactHooksPlugin,
+      "react-refresh": reactRefreshPlugin,
+    },
+    rules: {
+      ...reactPlugin.configs.recommended.rules,
+      ...reactHooksPlugin.configs.recommended.rules,
+      "react-refresh/only-export-components": "warn",
+
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-uses-react": "off",
     },
   },
 
