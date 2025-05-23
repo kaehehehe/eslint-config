@@ -52,38 +52,40 @@ const baseConfig = [
         "warn",
         {
           groups: [
-            "reactGroup",
             "builtin",
             "external",
             "internal",
             ["parent", "sibling", "index"],
             "object",
             "type",
-            "unknown",
           ],
           pathGroups: [
             {
               pattern: "react",
-              group: "reactGroup",
+              group: "external",
+              position: "before",
             },
             {
               pattern: "react/**",
-              group: "reactGroup",
+              group: "external",
+              position: "before",
             },
             {
               pattern: "react-dom",
-              group: "reactGroup",
+              group: "external",
+              position: "before",
             },
             {
               pattern: "react-dom/**",
-              group: "reactGroup",
+              group: "external",
+              position: "before",
             },
-
             {
               pattern: "@/**",
               group: "internal",
             },
           ],
+          pathGroupsExcludedImportTypes: ["react"],
           "newlines-between": "always",
           alphabetize: {
             order: "asc",
