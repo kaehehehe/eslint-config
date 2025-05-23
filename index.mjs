@@ -1,9 +1,8 @@
 import js from "@eslint/js";
 import unusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
-import tseslint from "@typescript-eslint/eslint-plugin";
-import pluginImportX from "eslint-plugin-import-x";
-import prettierPlugin from "eslint-plugin-prettier";
+import tseslint from "@typescript-eslint/eslint-plugin/dist/configs/recommended.js";
+import importXPlugin from "eslint-plugin-import-x";
 
 const baseConfig = [
   {
@@ -11,16 +10,21 @@ const baseConfig = [
   },
 
   js.configs.recommended,
-  tseslint.configs.recommended,
+  tseslint,
 
   {
     languageOptions: {
       globals: globals.browser,
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+        ecmaFeatures: { jsx: true },
+        sourceType: "module",
+      },
     },
     plugins: {
       "unused-imports": unusedImports,
-      "import-x": pluginImportX,
-      "@typescript-eslint": tseslint,
+      "import-x": importXPlugin,
+      "@typescript-eslint": tseslint.plugin,
       prettier: prettierPlugin,
     },
     rules: {
