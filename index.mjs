@@ -1,8 +1,11 @@
 import js from "@eslint/js";
-import unusedImports from "eslint-plugin-unused-imports";
+import unusedImportsPlugin from "eslint-plugin-unused-imports";
 import globals from "globals";
-import tseslint from "@typescript-eslint/eslint-plugin/dist/configs/recommended.js";
+import tseslintPlugin from "@typescript-eslint/eslint-plugin";
+import tseslintParser from "@typescript-eslint/parser";
 import importXPlugin from "eslint-plugin-import-x";
+import prettierPlugin from "eslint-plugin-prettier";
+import prettierConfig from "eslint-config-prettier";
 
 const baseConfig = [
   {
@@ -10,21 +13,23 @@ const baseConfig = [
   },
 
   js.configs.recommended,
-  tseslint,
+  tseslintPlugin.configs.recommended,
 
   {
     languageOptions: {
-      globals: globals.browser,
-      parser: "@typescript-eslint/parser",
+      globals: {
+        ...globals.browser,
+      },
+      parser: tseslintParser,
       parserOptions: {
-        ecmaFeatures: { jsx: true },
+        ecmaVersion: "latest",
         sourceType: "module",
       },
     },
     plugins: {
-      "unused-imports": unusedImports,
+      "unused-imports": unusedImportsPlugin,
       "import-x": importXPlugin,
-      "@typescript-eslint": tseslint.plugin,
+      "@typescript-eslint": tseslintPlugin,
       prettier: prettierPlugin,
     },
     rules: {
@@ -74,6 +79,8 @@ const baseConfig = [
       "prettier/prettier": "error",
     },
   },
+
+  prettierConfig,
 ];
 
 export default baseConfig;
