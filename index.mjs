@@ -16,7 +16,6 @@ const baseConfig = [
   },
 
   js.configs.recommended,
-  tseslintPlugin.configs.recommended,
 
   {
     languageOptions: {
@@ -98,12 +97,10 @@ const baseConfig = [
       ...reactPlugin.configs.recommended.rules,
       ...reactHooksPlugin.configs.recommended.rules,
       "react-refresh/only-export-components": "warn",
-
       "react/react-in-jsx-scope": "off",
       "react/jsx-uses-react": "off",
     },
   },
-
   prettierConfig,
 ];
 
