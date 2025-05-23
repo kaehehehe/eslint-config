@@ -3,6 +3,7 @@ import unusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import pluginImportX from "eslint-plugin-import-x";
+import prettierPlugin from "eslint-plugin-prettier";
 
 const baseConfig = [
   {
@@ -20,8 +21,8 @@ const baseConfig = [
       "unused-imports": unusedImports,
       "import-x": pluginImportX,
       "@typescript-eslint": tseslint,
+      prettier: prettierPlugin,
     },
-    extends: ["plugin:prettier/recommended"],
     rules: {
       "@typescript-eslint/no-unused-expressions": "warn",
       "unused-imports/no-unused-imports": "warn",
