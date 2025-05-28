@@ -1,4 +1,11 @@
-# 🛠️ Usage
+# @kaehehehe/eslint-config
+
+Stop wasting time wiring up ESLint and Prettier from scratch.  
+Drop in this config and start coding with clean, consistent style — instantly.
+
+An all-in-one ESLint Flat Config for React + TypeScript projects, including Prettier, import sorting, unused import cleanup, and more.
+
+## 🛠️ Usage
 
 ### 🚀 Installation
 
