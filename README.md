@@ -1,4 +1,4 @@
-# Usage
+# 🛠️ Usage
 
 ### 🚀 Installation
 
@@ -21,7 +21,8 @@ pnpm add -D \
 
 ### 🛠️ Configuration
 
-eslint.config.mjs
+🔧 `eslint.config.mjs`
+
 ```js
 import kaeConfig from "@kaehehehe/eslint-config";
 
@@ -31,7 +32,8 @@ export default eslintConfig;
 
 ```
 
-prettier.json
+✨ `prettier.json`
+
 ```json
 {
   "semi": true,
@@ -47,7 +49,7 @@ prettier.json
 
 ```
 
-.vscode > settings.json
+🧩 `.vscode/settings.json` (optional)
 
 ```json
 {
@@ -71,9 +73,14 @@ prettier.json
 
 ```
 
-package.json
+📜 `package.json`
+
 ```json
   "scripts": {
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
   },
 ```
+
+### 📄 License
+
+MIT © kaehehehe
