@@ -1,7 +1,8 @@
 {
   "name": "@kaehehehe/eslint-config",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "license": "MIT",
+  "description": "Preconfigured ESLint Flat Config for React + TypeScript projects with Prettier, import sorting, and unused import cleanup.",
   "url": "git+https://github.com/kaehehehe/eslint-config.git",
   "homepage": "https://github.com/kaehehehe/eslint-config#readme",
   "keywords": [
