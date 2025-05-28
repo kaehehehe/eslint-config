@@ -2,6 +2,17 @@
   "name": "@kaehehehe/eslint-config",
   "version": "1.0.11",
   "license": "MIT",
+  "url": "git+https://github.com/kaehehehe/eslint-config.git",
+  "homepage": "https://github.com/kaehehehe/eslint-config#readme",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "typescript",
+    "react",
+    "prettier",
+    "lint",
+    "code-style"
+  ],
   "type": "module",
   "main": "./index.mjs",
   "exports": {
