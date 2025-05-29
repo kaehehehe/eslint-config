@@ -5,9 +5,41 @@ Drop in this config and start coding with clean, consistent style — instantly.
 
 An all-in-one ESLint Flat Config for React + TypeScript projects, including Prettier, import sorting, unused import cleanup, and more.
 
-## 🛠️ Usage
-
 ### 🚀 Installation
+
+Install with your preferred package manager:
+
+```bash
+npm install -D \
+  @kaehehehe/eslint-config@latest \
+  @typescript-eslint/eslint-plugin \
+  @typescript-eslint/parser \
+  eslint \
+  eslint-config-prettier \
+  eslint-plugin-import-x \
+  eslint-plugin-prettier \
+  eslint-plugin-react \
+  eslint-plugin-react-hooks \
+  eslint-plugin-react-refresh \
+  eslint-plugin-unused-imports \
+  prettier
+```
+
+```bash
+yarn add -D \
+  @kaehehehe/eslint-config@latest \
+  @typescript-eslint/eslint-plugin \
+  @typescript-eslint/parser \
+  eslint \
+  eslint-config-prettier \
+  eslint-plugin-import-x \
+  eslint-plugin-prettier \
+  eslint-plugin-react \
+  eslint-plugin-react-hooks \
+  eslint-plugin-react-refresh \
+  eslint-plugin-unused-imports \
+  prettier
+```
 
 ```bash
 pnpm add -D \
@@ -25,11 +57,9 @@ pnpm add -D \
   prettier
 ```
 
+### 🛠️ Usage
 
-### 🛠️ Configuration
-
-🔧 `eslint.config.mjs`
-
+ESLint config (`eslint.config.mjs`)
 ```js
 import kaeConfig from "@kaehehehe/eslint-config";
 
@@ -39,7 +69,7 @@ export default eslintConfig;
 
 ```
 
-✨ `prettier.json`
+Prettier config (`prettier.json`)
 
 ```json
 {
@@ -56,7 +86,7 @@ export default eslintConfig;
 
 ```
 
-🧩 `.vscode/settings.json` (optional)
+VSCode settings (`.vscode/settings.json`)
 
 ```json
 {
@@ -80,7 +110,7 @@ export default eslintConfig;
 
 ```
 
-📜 `package.json`
+NPM Scripts (`package.json`)
 
 ```json
   "scripts": {
@@ -90,4 +120,4 @@ export default eslintConfig;
 
 ### 📄 License
 
-MIT © kaehehehe
+MIT © Kae(kaehehehe)
