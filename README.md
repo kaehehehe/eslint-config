@@ -7,7 +7,22 @@ An all-in-one ESLint Flat Config for React + TypeScript projects, including Pret
 
 ### 🚀 Installation
 
-Install with your preferred package manager:
+Run the CLI directly with `npx` in your project directory:
+
+```bash
+  npx create-kae-eslint
+```
+
+This will automatically set up:
+
+- ESLint config (`eslint.config.mjs`)
+- Prettier config (`prettier.json`)
+- VSCode settings (`.vscode/settings.json`)
+- Install required dependencies
+
+
+### 🛠️ Manual Installation (Optional)
+If you want to install dependencies yourself, run:
 
 ```bash
 npm install -D \
@@ -57,19 +72,17 @@ pnpm add -D \
   prettier
 ```
 
-### 🛠️ Usage
+Use this in your `eslint.config.mjs`:
 
-ESLint config (`eslint.config.mjs`)
 ```js
 import kaeConfig from "@kaehehehe/eslint-config";
 
 const eslintConfig = [...kaeConfig];
 
 export default eslintConfig;
-
 ```
 
-Prettier config (`prettier.json`)
+Prettier Config (`prettier.json`)
 
 ```json
 {
@@ -83,21 +96,14 @@ Prettier config (`prettier.json`)
   "arrowParens": "always",
   "singleQuote": true
 }
-
 ```
 
-VSCode settings (`.vscode/settings.json`)
+VSCode Settings (`.vscode/settings.json`)
 
 ```json
 {
-  "eslint.workingDirectories": [
-    {
-      "mode": "auto"
-    }
-  ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" },
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -106,9 +112,11 @@ VSCode settings (`.vscode/settings.json`)
   ],
   "eslint.useFlatConfig": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": true
+}
 
 ```
+
 
 NPM Scripts (`package.json`)
 
