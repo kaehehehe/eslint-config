@@ -38,7 +38,13 @@ const baseConfig = [
     rules: {
       "@typescript-eslint/no-unused-expressions": "warn",
       "unused-imports/no-unused-imports": "warn",
-      "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+      "no-unused-vars": [
+        "error",
+        {
+          args: "after-used",
+          argsIgnorePattern: "^_",
+        },
+      ],
       "unused-imports/no-unused-vars": [
         "warn",
         {
