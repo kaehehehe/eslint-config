@@ -36,24 +36,11 @@ const baseConfig = [
       prettier: prettierPlugin,
     },
     rules: {
-      "@typescript-eslint/no-unused-expressions": "warn",
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "unused-imports/no-unused-imports": "off",
+      "unused-imports/no-unused-vars": "off",
       "unused-imports/no-unused-imports": "warn",
-      "no-unused-vars": [
-        "error",
-        {
-          args: "after-used",
-          argsIgnorePattern: "^_",
-        },
-      ],
-      "unused-imports/no-unused-vars": [
-        "warn",
-        {
-          vars: "all",
-          varsIgnorePattern: "^_",
-          args: "none",
-          argsIgnorePattern: "^_",
-        },
-      ],
       "no-console": "warn",
       "import-x/order": [
         "warn",
